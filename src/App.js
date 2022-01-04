@@ -1,10 +1,10 @@
 import Header from './components/Header';
-
+import FeedbackList from './components/FeedbackList';
 const App = () => (
   <>
-    <Header title="Feedback Ui" />
+    <Header text="Feedback Ui" />
     <div className="container">
-      <h1>App component</h1>
+      <FeedbackList />
     </div>
   </>
 );
