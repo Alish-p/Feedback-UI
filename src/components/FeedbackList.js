@@ -1,12 +1,13 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import data from './data/data';
 import Feedback from './Feedback';
 import FeedbackForm from './FeedbackForm';
 import FeedbackStats from './FeedbackStats';
 import { motion, AnimatePresence } from 'framer-motion';
+import feedbackContext from '../Context/FeedbackContext';
 
 const FeedbackList = () => {
-  const [feedbacks, setFeedbacks] = useState(data);
+  const { feedbacks, setFeedbacks } = useContext(feedbackContext);
 
   const handleRemove = (id) => {
     setFeedbacks((prev) => prev.filter((i) => i.id !== id));
